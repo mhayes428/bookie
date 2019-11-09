@@ -5,7 +5,7 @@ import BookList from './BookList';
 
 class Books extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       books: [],
       searchField: ''
