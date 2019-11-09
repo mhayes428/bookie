@@ -42,7 +42,7 @@ class Books extends Component {
       }
 
       else if (book.volumeInfo.hasOwnProperty('imageLinks') === false) {
-        book.volumeInfo['imageLinks'] = { thumbnail 'https://vignette.wikia.nocookie.net/' };
+        book.volumeInfo['imageLinks'] = { thumbnail: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/No_image_available_600_x_450.svg/600px-No_image_available_600_x_450.svg.png' };
       }
 
       return book;
@@ -53,13 +53,19 @@ class Books extends Component {
 
   render() {
     const sortedBooks = this.state.books.sort((a, b) => {
-      
+      if (this.state.sort === 'Newest') {
+        return parseInt(b.volumeInfo.publishedDate.substring(0, 4)) - parseInt(a.volumeInfo.publishedDate.substring(0, 4))
+      }
+
+      else if (this.state.sort === 'Oldest') {
+        return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedDate.substring(0, 4))
+      } 
     })
 
     return (
       <div>
         <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} handleSort={this.handleSort} />
-        <BookList books={this.state.books} />
+        <BookList books={sortedBooks} />
       </div>
     );
   }
