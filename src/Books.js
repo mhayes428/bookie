@@ -11,6 +11,7 @@ class Books extends Component {
   }
 
   handleSearch = (e) => {
+    // console.log(e.target.value);
     this.setState({ searchField: e.target.value })
   }
 
