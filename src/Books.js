@@ -4,7 +4,7 @@ import request from 'superagent';
 import BookList from './BookList';
 
 class Books extends Component {
-  constructor(props) {
+  constructor(props){
     super(props);
     this.state = {
       books: [],
@@ -61,6 +61,7 @@ class Books extends Component {
         return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedDate.substring(0, 4))
       } 
     })
+  console.log(sortedBooks);
 
     return (
       <div>
