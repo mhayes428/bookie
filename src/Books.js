@@ -16,10 +16,10 @@ class Books extends Component {
   searchBook = (e) => {
     e.preventDefault();
     request
-      .get("https://www.googleapis.com/books/v1/volumes?q=search+terms")
+      .get("https://www.googleapis.com/books/v1/volumes?q=")
       .query({ q: this.searchField })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         const cleanData = this.cleanData(data)
         this.setState({ books: cleanData })
       })
@@ -61,7 +61,7 @@ class Books extends Component {
         return parseInt(a.volumeInfo.publishedDate.substring(0, 4)) - parseInt(b.volumeInfo.publishedDate.substring(0, 4))
       } 
     })
-  console.log(sortedBooks);
+  // console.log(sortedBooks);
 
     return (
       <div>
