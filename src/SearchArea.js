@@ -1,5 +1,4 @@
 import React from 'react';
-import { arrayExpression } from '@babel/types';
 
 const SearchArea = () => {
     return (

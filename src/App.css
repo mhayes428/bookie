@@ -15,3 +15,7 @@ header h1 {
   margin-left: 15px;
   font-weight: 300;
 }
+
+div.search-area {
+  text-align: center;
+}
