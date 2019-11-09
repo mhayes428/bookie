@@ -1,4 +1,5 @@
 import React from 'react';
+import BookCard from './BookCard';
 
 const BookList = (props) => {
     return (
@@ -6,11 +7,12 @@ const BookList = (props) => {
             {
                 props.books.map((book, i) => {
                     return <BookCard
-                                image={book.volumeInfo.imageLinks.thumbnail}
-                                title={book.title}
-                                author={book.authors}
-                                published={book.publishedDate}
-                            />
+                        key={i}
+                        image={book.volumeInfo.imageLinks.thumbnail}
+                        title={book.title}
+                        author={book.authors}
+                        published={book.publishedDate}
+                    />
                 })
             }
         </div>

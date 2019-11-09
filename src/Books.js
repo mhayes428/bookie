@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SearchArea from './SearchArea';
 import request from 'superagent';
-// import BookList from './BookList';
+import BookList from './BookList';
 
 class Books extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Books extends Component {
     return (
       <div>
         <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} />
-        {/* <BookList books={this.state.books} /> */}
+        <BookList books={this.state.books} />
       </div>
     );
   }
