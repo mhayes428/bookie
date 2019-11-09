@@ -30,7 +30,7 @@ class Books extends Component {
     return (
       <div>
         <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} />
-        <BookList />
+        <BookList books={this.state.books} />
       </div>
     );
   }
