@@ -5,7 +5,12 @@ const BookList = (props) => {
         <div className="list">
             {
                 props.books.map((book, i) => {
-                    return <BookCard />
+                    return <BookCard
+                                image={}
+                                title={}
+                                author={}
+                                published={}
+                            />
                 })
             }
         </div>
