@@ -16,7 +16,7 @@ class Books extends Component {
   searchBook = (e) => {
     e.preventDefault();
     request
-      .get("https://www.googleapis.com/books/v1/volumes?q=")
+      .get("https://www.googleapis.com/books/v1/volumes?q=dogs")
       .query({ q: this.searchField })
       .then((data) => {
         // console.log(data);
