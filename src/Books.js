@@ -20,7 +20,8 @@ class Books extends Component {
       .query({ q: this.searchField })
       .then((data) => {
         console.log(data);
-        this.setState({ books: [...data.body.items]})
+        const cleanData = this.cleanData(data)
+        this.setState({ books: cleanData })
       })
   }
 
@@ -34,7 +35,27 @@ class Books extends Component {
     this.setState({ sort: e.target.value })
   }
 
+  cleanData = (data) => {
+    const cleanedData = data.body.items.map((book) => {
+      if (book.volumeInfo.hasOwnProperty('publishedDate') === false) {
+        book.volumeInfo['publishedData'] = '0000';
+      }
+
+      else if (book.volumeInfo.hasOwnProperty('imageLinks') === false) {
+        book.volumeInfo['imageLinks'] = { thumbnail 'https://vignette.wikia.nocookie.net/' };
+      }
+
+      return book;
+    })
+
+    return cleanedData;
+  }
+
   render() {
+    const sortedBooks = this.state.books.sort((a, b) => {
+      
+    })
+
     return (
       <div>
         <SearchArea searchBook={this.searchBook} handleSearch={this.handleSearch} handleSort={this.handleSort} />
