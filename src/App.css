@@ -26,12 +26,14 @@ select:focus
   width: 100px;
   padding: 20px 0 20px 0;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 .search-area form {
   width: 500px;
   margin: 0 auto;
   padding: 20px 0px 20px 140px;
+  border-radius: 5px;
 }
 
 .search-area button {
@@ -43,12 +45,14 @@ select:focus
   margin: 0 15px 0 0;
   position: relative;
   top: -2px;
+  border-radius: 5px;
 }
 
 input {
   width: 150px;
   padding: 5px;
   font-size: 1em;
+  border-radius: 5px;
 }
 
 
@@ -62,7 +66,7 @@ input {
 
 .card-container {
   width: 250px;
-  border: 1px solid rgba(0,0,0,.125);
+  border: 5px solid rgba(0, 0, 0, 0.137);
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
@@ -93,6 +97,7 @@ input {
 img {
   width: 100%;
   height: 250px;
+  
 }
 
 select {
@@ -102,4 +107,5 @@ select {
   width: 70px;
   position: relative;
   top: -2px;
+  border-radius: 5px;
 }
