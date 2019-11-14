@@ -3,7 +3,7 @@
 How to use:
 1. Clone from GitHub to a directory in your computer
 2. ### `npm install`
-3. Locate the directory in your terminal and run `### npm start`
+3. Locate the directory in your terminal and run ### `npm start`
 
 
 
