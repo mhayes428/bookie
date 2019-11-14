@@ -2,8 +2,8 @@
 
 How to use:
 1. Clone from GitHub to a directory in your computer
-2. Run `npm install` in your terminal
-3. Locate the directory in your terminal and run `### npm start`
+2. Locate the repository in the terminal and run `npm install`
+3. Run with `npm start`
 
 
 
