@@ -1,3 +1,14 @@
+## Bookie
+
+How to use:
+1. Clone from GitHub to a directory in your computer
+2. ### `npm install`
+3. Locate the directory in your terminal and run `### npm start`
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
