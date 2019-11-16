@@ -74,7 +74,7 @@ input {
 .card-container {
   font-family: 'Roboto', sans-serif;
   width: 250px;
-  border: 5px solid rgba(0, 0, 0, 0.137);
+  border: 5px solid rgba(128, 128, 0, 0.39);
   margin: 0 auto;
   border-radius: 5px;
   overflow: hidden;
